@@ -1,22 +1,18 @@
-# Cleaning validation of an API in Pharmaceutical Industry
-
-A new web application for API "Active Pharmaceutical Ingredients" cleaning validation promises to improve efficiency and compliance with regulations.
-
-# Web Application Development for API Cleaning Validation
+# Cleaning validation of an API in Pharmaceutical Industry Web Application
 
 ## Project Description
 
-A new web application is being developed to enhance efficiency and compliance with regulations in API cleaning validation. The application will allow users to perform automatic and manual verifications of API cleanliness, ensuring they meet established standards.
+A new web application is being developed to enhance efficiency and compliance with regulations in API "Active Pharmaceutical Ingredients" cleaning validation. The application will allow users to perform automatic and manual verifications of API cleanliness, ensuring they meet established standards.
 
 ## Tasks
 
 ### User Registration:
 
-- Implement a user registration system that requests information such as name, email, and password.
+- Implement a user registration system that requests information such as ***name, email, and password.***
 
 ### Login:
 
-- Create a login page to authenticate registered users.
+- Create a login page to ***authenticate registered users.***
 
 ### Project Management:
 
@@ -81,29 +77,29 @@ This challenge addresses various aspects of web development in Java Spring Boot,
 
 **Bonus Challenge:**
 
--  Bonus Challenge 1: Container Orchestration (Advanced)
+-  _Bonus Challenge 1_: Container Orchestration (Advanced)
 Consider containerizing your microservices using Docker and orchestrate them using Kubernetes or Docker Compose. Design your architecture to be easily deployable and scalable within a containerized environment.
 
--  Bonus Challenge 2: API Gateway (Intermediate)
+-  _Bonus Challenge 2_: API Gateway (Intermediate)
 Implement an API Gateway as a separate microservice responsible for routing and load balancing requests to the appropriate microservices. Consider using tools like Netflix Zuul or Spring Cloud Gateway.
 
--  Bonus Challenge 3: Event-Driven Architecture (Advanced)
+-  _Bonus Challenge 3_: Event-Driven Architecture (Advanced)
 Introduce an event-driven architecture using a message broker like Apache Kafka or RabbitMQ. Microservices can publish events when certain actions occur (e.g., new orders) and subscribe to events they're interested in. This allows for asynchronous communication and decoupling of services.
 
--  Bonus Challenge 4: Centralized Logging and Monitoring (Intermediate)
+-  _Bonus Challenge 4_: Centralized Logging and Monitoring (Intermediate)
 Set up centralized logging and monitoring for your microservices. Use tools like ELK Stack (Elasticsearch, Logstash, Kibana) or Prometheus and Grafana to gain insights into the health and performance of your services.
 
--  Bonus Challenge 5: Security (Advanced)
+-  _Bonus Challenge 5_: Security (Advanced)
 Implement robust security measures in your microservices architecture. This includes securing API endpoints with OAuth2 or JWT, ensuring data encryption, and setting up role-based access control (RBAC).
 
--  Bonus Challenge 6: Service Resilience (Intermediate)
+-  _Bonus Challenge 6_: Service Resilience (Intermediate)
 Design your microservices to be resilient to failures. Implement circuit breakers (e.g., Hystrix), retries, and timeouts to prevent cascading failures in case one microservice becomes unresponsive.
 
--  Bonus Challenge 7: Continuous Integration and Deployment (CI/CD) Pipeline (Advanced)
+-  _Bonus Challenge 7_: Continuous Integration and Deployment (CI/CD) Pipeline (Advanced)
 Create a CI/CD pipeline to automate the testing, building, and deployment of your microservices. Use tools like Jenkins, Travis CI, or GitLab CI to achieve this.
 
--  Bonus Challenge 8: Micro Frontends (Intermediate)
+-  _Bonus Challenge 8_: Micro Frontends (Intermediate)
 Explore the concept of micro frontends to complement your microservices architecture. Implement separate front-end modules that can be independently developed and deployed.
 
--  Bonus Challenge 9: Load Testing and Performance Tuning (Advanced)
+-  _Bonus Challenge 9_: Load Testing and Performance Tuning (Advanced)
 Conduct load testing to assess the performance of your microservices under high loads. Identify bottlenecks and optimize your services accordingly.
