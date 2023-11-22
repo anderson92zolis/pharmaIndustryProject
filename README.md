@@ -1,62 +1,109 @@
-# pharmaIndustryProject
-Una nueva aplicación web para la validación de limpieza de API promete mejorar la eficiencia y la conformidad con las regulaciones.
+# Cleaning validation of an API in Pharmaceutical Industry
 
-# Desarrollo de Aplicación Web para Validación de Limpieza de API
+A new web application for API "Active Pharmaceutical Ingredients" cleaning validation promises to improve efficiency and compliance with regulations.
 
-## Descripción del Proyecto
+# Web Application Development for API Cleaning Validation
 
-Una nueva aplicación web está siendo desarrollada para mejorar la eficiencia y la conformidad con las regulaciones en la validación de limpieza de API. La aplicación permitirá a los usuarios realizar verificaciones automáticas y manuales de la limpieza de las API, asegurando que cumplan con los estándares establecidos.
+## Project Description
 
-## Tareas
+A new web application is being developed to enhance efficiency and compliance with regulations in API cleaning validation. The application will allow users to perform automatic and manual verifications of API cleanliness, ensuring they meet established standards.
 
-### Registro de Usuarios:
+## Tasks
 
-- Implementar un sistema de registro de usuarios que solicite información como nombre, correo electrónico y contraseña.
+### User Registration:
 
-### Inicio de Sesión:
+- Implement a user registration system that requests information such as name, email, and password.
 
-- Crear una página de inicio de sesión para autenticar a los usuarios registrados.
+### Login:
 
-### Gestión de Proyectos:
+- Create a login page to authenticate registered users.
 
-- Permitir a los usuarios crear, editar y eliminar proyectos para organizar las validaciones de limpieza de API.
+### Project Management:
 
-### Configuración de API:
+- Allow users to create, edit, and delete projects to organize API cleaning validations.
 
-- Implementar una funcionalidad que permita a los usuarios configurar los detalles de las API que desean validar, como la URL, los parámetros y los encabezados.
+### API Configuration:
 
-### Validación Automática:
+- Implement functionality that enables users to configure details of the APIs they want to validate, such as URL, parameters, and headers.
 
-- Desarrollar un sistema automatizado que realice verificaciones automáticas de limpieza de API según las configuraciones proporcionadas.
+### Automatic Validation:
 
-### Validación Manual:
+- Develop an automated system to perform automatic API cleaning validations based on provided configurations.
 
-- Crear una interfaz intuitiva que permita a los usuarios realizar validaciones manuales, revisando los resultados de la limpieza de la API y tomando decisiones basadas en la conformidad.
+### Manual Validation:
 
-### Registro de Resultados:
+- Create an intuitive interface for users to perform manual validations, reviewing API cleaning results and making decisions based on compliance.
 
-- Almacenar los resultados de las validaciones, indicando si la API cumple o no con los estándares de limpieza establecidos.
+### Results Logging:
 
-### Notificaciones:
+- Store validation results, indicating whether the API complies with established cleanliness standards.
 
-- Implementar un sistema de notificaciones para alertar a los usuarios sobre los resultados de las validaciones, tanto automáticas como manuales.
+### Notifications:
 
-### Informes y Estadísticas:
+- Implement a notification system to alert users about validation results, both automatic and manual.
 
-- Proporcionar informes detallados y estadísticas sobre la conformidad de las API en cada proyecto.
+### Reports and Statistics:
 
-### Seguridad:
+- Provide detailed reports and statistics on API compliance in each project.
 
-- Implementar medidas de seguridad, como cifrado de contraseñas y protección contra ataques CSRF.
+### Security:
 
-### Documentación:
+- Implement security measures, such as password encryption and protection against CSRF attacks.
 
-- Crear una documentación clara y concisa que explique cómo utilizar la aplicación, incluyendo ejemplos y casos de uso.
+### Documentation:
 
-## Recursos Adicionales
+- Create clear and concise documentation explaining how to use the application, including examples and use cases.
 
-- Utiliza Thymeleaf o alguna otra tecnología de plantillas para la interfaz de usuario.
-- Emplea Spring Security para gestionar la autenticación y autorización.
-- Utiliza una base de datos para almacenar información sobre usuarios, proyectos, configuraciones de API y resultados de validaciones.
+## Additional Resources
 
-Este desafío aborda diversos aspectos del desarrollo web en Java Spring Boot, desde la gestión de usuarios hasta la implementación de lógica de validación automática y manual. ¡Buena suerte en el desarrollo de esta aplicación de validación de limpieza de API!
+- Use Thymeleaf or another template technology for the user interface.
+- Employ Spring Security to manage authentication and authorization.
+- Use a database to store information about users, projects, API configurations, and validation results.
+
+This challenge addresses various aspects of web development in Java Spring Boot, from user management to the implementation of automatic and manual validation logic. Good luck with the development of this API cleaning validation application!
+
+**Constraints**:
+
+-  Use a RESTful API design for communication between microservices.
+-  Each microservice should be independently deployable and scalable.
+-  Ensure data consistency and consider eventual consistency where needed.
+-  Implement proper error handling and validation in each microservice.
+-  You'll choose Java & Spring Boot for implementing microservices.
+
+**Deliverables**:
+
+-  Provide a high-level architectural diagram that illustrates how these microservices interact with each other. Additionally, describe the communication patterns between microservices and how they handle data storage and retrieval.
+
+**Evolving ideas**:
+
+-  Parent Project 
+-  SonarCloud
+
+**Bonus Challenge:**
+
+-  Bonus Challenge 1: Container Orchestration (Advanced)
+Consider containerizing your microservices using Docker and orchestrate them using Kubernetes or Docker Compose. Design your architecture to be easily deployable and scalable within a containerized environment.
+
+-  Bonus Challenge 2: API Gateway (Intermediate)
+Implement an API Gateway as a separate microservice responsible for routing and load balancing requests to the appropriate microservices. Consider using tools like Netflix Zuul or Spring Cloud Gateway.
+
+-  Bonus Challenge 3: Event-Driven Architecture (Advanced)
+Introduce an event-driven architecture using a message broker like Apache Kafka or RabbitMQ. Microservices can publish events when certain actions occur (e.g., new orders) and subscribe to events they're interested in. This allows for asynchronous communication and decoupling of services.
+
+-  Bonus Challenge 4: Centralized Logging and Monitoring (Intermediate)
+Set up centralized logging and monitoring for your microservices. Use tools like ELK Stack (Elasticsearch, Logstash, Kibana) or Prometheus and Grafana to gain insights into the health and performance of your services.
+
+-  Bonus Challenge 5: Security (Advanced)
+Implement robust security measures in your microservices architecture. This includes securing API endpoints with OAuth2 or JWT, ensuring data encryption, and setting up role-based access control (RBAC).
+
+-  Bonus Challenge 6: Service Resilience (Intermediate)
+Design your microservices to be resilient to failures. Implement circuit breakers (e.g., Hystrix), retries, and timeouts to prevent cascading failures in case one microservice becomes unresponsive.
+
+-  Bonus Challenge 7: Continuous Integration and Deployment (CI/CD) Pipeline (Advanced)
+Create a CI/CD pipeline to automate the testing, building, and deployment of your microservices. Use tools like Jenkins, Travis CI, or GitLab CI to achieve this.
+
+-  Bonus Challenge 8: Micro Frontends (Intermediate)
+Explore the concept of micro frontends to complement your microservices architecture. Implement separate front-end modules that can be independently developed and deployed.
+
+-  Bonus Challenge 9: Load Testing and Performance Tuning (Advanced)
+Conduct load testing to assess the performance of your microservices under high loads. Identify bottlenecks and optimize your services accordingly.
