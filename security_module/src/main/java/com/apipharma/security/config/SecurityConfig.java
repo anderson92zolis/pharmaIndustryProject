@@ -24,7 +24,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final JwtAthFilter jwtAthFilter;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     private final UserDao userDao;
 
@@ -42,7 +42,7 @@ public class SecurityConfig {
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             .and()
             .authenticationProvider(authenticationProvider()) // using our AuthentificationProvider
-            .addFilterBefore(jwtAthFilter,  UsernamePasswordAuthenticationFilter.class);
+            .addFilterBefore(jwtAuthenticationFilter,  UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }

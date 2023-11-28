@@ -3,9 +3,12 @@ package com.apipharma.security.config;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.io.Decoders;
+import io.jsonwebtoken.security.Keys;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,14 +16,28 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 @Service
-public class JwtUtils {
+public class JwtService {
 
     // WHERE TO Generated https://www.allkeysgenerator.com/
-    private final String SECRET_KEY="secret";
+    private final String SECRET_KEY="M631rR_iH3Yp_w5i9a8u0w38770-p1082675171";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject); // get subject okay so because as I mentioned  before the subject is or should be the email o surname
     }
+
+    private Claims extractAllClaims(String token) {
+        return Jwts
+                .parserBuilder()
+                .setSigningKey(getSignInKey())
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+    }
+    private Key getSignInKey() {
+        byte[] keyBytes = Decoders.BASE64.decode(SECRET_KEY);
+        return Keys.hmacShaKeyFor(keyBytes);
+    }
+}
 
     private Date extractExpiration(String token) {
         return extractClaim(token, Claims::getExpiration); // extract the expiration date
@@ -36,13 +53,7 @@ public class JwtUtils {
         return claimsResolver.apply(claims);
     }
 
-    private Claims extractAllClaims(String token) {
-        return Jwts
-                .parser()
-                .setSigningKey(SECRET_KEY)
-                .parseClaimsJws(token)
-                .getBody();
-    }
+
 
     private boolean isTokenExpired(String token) {   // verify it the token is expired
         return extractExpiration(token).before(new Date());
