@@ -1,7 +1,6 @@
 package com.apipharma.security.controller;
 
 import com.apipharma.security.config.JwtService;
-import com.apipharma.security.dao.UserDao;
 import com.apipharma.security.dto.AuthenticationRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +19,7 @@ public class AuthenticationController {
 
     private final AuthenticationManager authenticationManager;
 
-    private final UserDao userDao;
+    private final UserRepository userDao;
 
     private final JwtService jwtUtils;  // this class generates the token
 
