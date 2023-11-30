@@ -17,8 +17,8 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-    // WHERE TO Generated https://www.allkeysgenerator.com/
-    private final String SECRET_KEY="M631rR_iH3Yp_w5i9a8u0w38770-p1082675171";
+    // WHERE TO Generated https://www.allkeysge nerator.com/
+    private final String SECRET_KEY="635266556A586E3272357538782F413F442A472D4B6150645367566B59703373";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject); // get subject okay so because as I mentioned  before the subject is or should be the email o surname
