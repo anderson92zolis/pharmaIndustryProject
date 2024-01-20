@@ -11,17 +11,11 @@
 
     <artifactId>report-aggregate</artifactId>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.apipharma</groupId>
             <artifactId>security_module</artifactId>
-            <version>${project.parent.version}</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
@@ -30,6 +24,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco-maven-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>report-aggregate</id>
@@ -42,5 +37,9 @@
             </plugin>
         </plugins>
     </build>
+
+    <properties>
+        <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
+    </properties>
 
 </project>
