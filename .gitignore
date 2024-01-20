@@ -1,42 +1,3 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
-*.iml
-*.ipr
-
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
-.DS_Store
-
 # ignore files for git
 
 # Compiled source #
@@ -68,6 +29,8 @@ build/
 ##############################
 CVS/
 bin/
+build/
+target/
 test-output/
 dist/
 logs/
@@ -92,9 +55,11 @@ data
 *.classpath
 *.project
 *.tern-project
+.gitignore
 .recommenders
 .vagrant
 .idea
+*.iml
 
 # Logs and databases #
 ######################
@@ -106,6 +71,7 @@ data
 # OS generated files #
 ######################
 .lock
+.DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
@@ -114,3 +80,4 @@ Icon?
 ehthumbs.db
 Thumbs.db
 *.db
+
