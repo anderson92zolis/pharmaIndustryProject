@@ -25,7 +25,7 @@ public class SecurityConfig {
         http
             .csrf().disable()
             .authorizeHttpRequests() // if  some endpoint need Authorize
-            .requestMatchers("/api/v1/auth/**")
+            .requestMatchers("/api/v1/auth/**", "/api/v1/demo-controller/**")
             .permitAll()
             .anyRequest()
             .authenticated()
