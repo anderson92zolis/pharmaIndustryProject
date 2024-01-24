@@ -27,6 +27,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.boot.dependencies.version>3.0.6</spring.boot.dependencies.version>
         <spring.boot.maven.plugin.version>2.5.7</spring.boot.maven.plugin.version>
+        <sonar.organization>anderson92zolis</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
         <sonar.coverage.jacoco.xmlReportPaths>
                 ${project.basedir}/report-aggregate/target/site/
