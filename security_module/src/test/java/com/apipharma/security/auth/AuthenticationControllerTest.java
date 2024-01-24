@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -17,9 +19,13 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RequiredArgsConstructor
+@WebMvcTest(AuthenticationController.class)
 class AuthenticationControllerTest {
 
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Autowired
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Mock
@@ -27,8 +33,6 @@ class AuthenticationControllerTest {
 
     @InjectMocks
     private AuthenticationController authenticationController;
-
-    private MockMvc mockMvc;
 
     @BeforeEach
     void setUp() {
@@ -48,7 +52,7 @@ class AuthenticationControllerTest {
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/v1/auth/register")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(registerRequest));
+                .content(asJsonString(registerRequest));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -75,7 +79,7 @@ class AuthenticationControllerTest {
         RequestBuilder requestBuilder = MockMvcRequestBuilders
                 .post("/api/v1/auth/authenticate")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(authenticationRequest));
+                .content(asJsonString(authenticationRequest));
 
         MvcResult result = mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
@@ -88,5 +92,14 @@ class AuthenticationControllerTest {
         // Perform additional assertions as needed
         // For example, assert that the response token matches the expected value
         // assertEquals("expectedTokenValue", response.getToken());
+    }
+
+    private static String asJsonString(final Object obj) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            return objectMapper.writeValueAsString(obj);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
