@@ -25,7 +25,7 @@ class DemoControllerTest {
 
     @Test
     @DisplayName("greeting test")
-    public void testSayHello() throws Exception {
+    void testSayHello() throws Exception {
 
         //when
         mockMvc.perform(get("/api/v1/demo-controller/test")
@@ -39,7 +39,7 @@ class DemoControllerTest {
 
     @Test
     @DisplayName("bye test")
-    public void testSayGoodBye() throws Exception {
+    void testSayGoodBye() throws Exception {
 
         //when
         mockMvc.perform(get("/api/v1/demo-controller/say-good-bye")
