@@ -7,6 +7,7 @@
         <groupId>com.apipharma</groupId>
         <artifactId>api_project</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>report-aggregate</artifactId>
@@ -32,7 +33,6 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.8</version>
                 <executions>
                     <execution>
                         <id>report-aggregate</id>
