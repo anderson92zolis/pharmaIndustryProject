@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
+//@ComponentScan("com.apipharma.security.auth")
 public class SecurityApp {
 
     public static void main(String[] args) {
